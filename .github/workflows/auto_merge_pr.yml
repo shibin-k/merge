@@ -1,8 +1,12 @@
 name: Auto merge pull requests
 on:
-  check_suite:
-    types: [completed]
-    branches: [develop, master]
+  issue_comment:
+    types: [created, edited]
+  label:
+    types: [created, deleted]
+  #check_suite:
+   # types: [completed]
+   # branches: [develop, master]
 jobs:
   build:
     name: AutoMergePR

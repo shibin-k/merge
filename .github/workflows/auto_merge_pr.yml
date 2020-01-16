@@ -9,16 +9,19 @@ on:
    # branches: [develop, master]
 jobs:
   build:
-    name: AutoMergePR
+    name: Auto Merge PR
     # This job runs on github hosted Linux machine
     runs-on: ubuntu-latest
     steps:
-      # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
-      - name: Hello world
-        uses: actions/hello-world-javascript-action@v1
+      - uses: actions/checkout@v1
+      - name: Set up Python
+        uses: actions/setup-python@v1
         with:
-          who-to-greet: 'Test user'
-        id: hello
-      # This step prints an output (time) from the previous step's action.
-      - name: Echo the greeting's time
-        run: echo 'The time was ${{ steps.hello.outputs.time }}.'
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+      # This step checks if PR need to be auto merged and merge it conditionally
+      - name: Auto Merge
+        uses: actions/auto-merge@master
+        

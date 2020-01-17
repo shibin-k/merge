@@ -25,5 +25,5 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
       # This step checks if PR need to be auto merged and merge it conditionally
       - name: Auto Merge
-        uses: ./.github/actions/auto-merge@master
+        uses: ./.github/actions/auto_merge@master
         

@@ -1,7 +1,5 @@
 FROM python:3-alpine
 
-#MAINTAINER ss
-
 LABEL "com.github.actions.name"="Auto merge pull requests"
 LABEL "com.github.actions.description"="Merge the pull requests automatically based on required conditions"
 LABEL "com.github.actions.icon"="activity"

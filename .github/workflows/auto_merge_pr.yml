@@ -16,13 +16,13 @@ jobs:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
-      - name: Set up Python
-        uses: actions/setup-python@v1
-        with:
-          python-version: '3.x'
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip setuptools wheel
+#       - name: Set up Python
+#         uses: actions/setup-python@v1
+#         with:
+#           python-version: '3.x'
+#       - name: Install dependencies
+#         run: |
+#           python -m pip install --upgrade pip setuptools wheel
       # This step checks if PR need to be auto merged and merge it conditionally
       - name: Auto Merge
         uses: ./.github/actions/auto_merge

@@ -11,4 +11,4 @@ if __name__ == '__main__':
     event_data = json.load(open(github_event_path))
     
     print("Event Data")
-    print event_data
+    print(f"*** Event data {event_data}. Event path: {github_event_path}")

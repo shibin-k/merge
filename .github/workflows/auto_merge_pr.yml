@@ -13,9 +13,9 @@ jobs:
     # This job runs on github hosted Linux machine
     runs-on: ubuntu-latest
     steps:
-    #  - uses: actions/checkout@v1
-     #   with:
-      #    fetch-depth: 1
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
 #       - name: Set up Python
 #         uses: actions/setup-python@v1
 #         with:

@@ -1,5 +1,0 @@
-name: 'Auto Merge PR'
-description: 'Auto merges PR if PR is approved and checks are passing'
-runs:
-  using: 'python3'
-  main: 'merge_pr.py'
